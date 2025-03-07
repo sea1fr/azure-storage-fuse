@@ -231,11 +231,11 @@ func (dl *Datalake) CreateFile(name string, mode os.FileMode) error {
 		log.Err("Datalake::CreateFile : Failed to create file %s [%s]", name, err.Error())
 		return err
 	}
-	err = dl.ChangeMod(name, mode)
-	if err != nil {
-		log.Err("Datalake::CreateFile : Failed to set permissions on file %s [%s]", name, err.Error())
-		return err
-	}
+	// err = dl.ChangeMod(name, mode)
+	// if err != nil {
+	// 	log.Err("Datalake::CreateFile : Failed to set permissions on file %s [%s]", name, err.Error())
+	// 	return err
+	// }
 
 	return nil
 }
